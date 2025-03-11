@@ -11,14 +11,16 @@ if __name__ == "__main__":
     lst.add_obj(ObjList(data2))
     lst.add_obj(ObjList(data3))
 
-    res = lst.get_data()
-    print(res)
+    res = lst.get_data() # ['данные 1', 'данные 2', 'данные 3']
+
+    # try:
+    #     lst.add_obj("неправильный объект")
+    # except InvalidObjectTypeError as e:
+    #     print(f"Ошибка: {e}")
 
     lst.remove_obj()
-    res = lst.get_data()
-    print(res)
+    res = lst.get_data() # ['данные 1', 'данные 2']
 
     lst.remove_obj()
     lst.remove_obj()
-    res = lst.get_data()
-    print(res)
+    res = lst.get_data() # []
